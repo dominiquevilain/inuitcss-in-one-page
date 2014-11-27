@@ -16,10 +16,10 @@ TOOLS
 
 GENERIC
 -------
-- [generic.normalize](https://github.com/inuitcss/generic.normalize/blob/master/_generic.normalize.scss)
-- [generic.reset](https://github.com/inuitcss/generic.reset/blob/master/_generic.reset.scss)
-- [generic.box-sizing](https://github.com/inuitcss/generic.box-sizing/blob/master/_generic.box-sizing.scss)
-- [generic.shared](https://github.com/inuitcss/generic.shared/blob/master/_generic.shared.scss)
+- The [generic.normalize](https://github.com/inuitcss/generic.normalize/blob/master/_generic.normalize.scss) module contains @necolas’ normalize.css. 
+- The [generic.reset](https://github.com/inuitcss/generic.reset/blob/master/_generic.reset.scss) module is a considered approach to resetting elements. It selectively removes margins and paddings from certain elements, and provides some sensible defaults for some others.
+- The [generic.box-sizing](https://github.com/inuitcss/generic.box-sizing/blob/master/_generic.box-sizing.scss) module causes all elements to use the more useful border-box box model.
+- The [generic.shared](https://github.com/inuitcss/generic.shared/blob/master/_generic.shared.scss) module contains several high-level rulesets which apply a consistent, shared declaration (typically margins) across a number of elements.
 
 BASE
 ----
