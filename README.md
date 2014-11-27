@@ -48,10 +48,12 @@ OBJECTS
 COMPONENTS
 ----------
 
+The framework does not provide any component module. It's the place where you define the styles specific to your site’s components.
+
 TRUMPS
 ------
-- [trumps.clearfix](https://github.com/inuitcss/trumps.clearfix/blob/master/_trumps.clearfix.scss)
-- [trumps.widths](https://github.com/inuitcss/trumps.widths/blob/master/_trumps.widths.scss)
+- The [trumps.clearfix](https://github.com/inuitcss/trumps.clearfix/blob/master/_trumps.clearfix.scss) module is a minimal clearfix helper class.
+- The [trumps.widths](https://github.com/inuitcss/trumps.widths/blob/master/_trumps.widths.scss) module is a simple file of helper classes to drop widths onto elements such as grid systems.
 - [trumps.widths-responsive](https://github.com/inuitcss/trumps.widths-responsive/blob/master/_trumps.widths-responsive.scss)
 - [trumps.spacing](https://github.com/inuitcss/trumps.spacing/blob/master/_trumps.spacing.scss)
 - [trumps.spacing-responsive](https://github.com/inuitcss/trumps.spacing-responsive/blob/master/_trumps.spacing-responsive.scss)
