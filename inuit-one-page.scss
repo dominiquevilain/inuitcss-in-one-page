@@ -60,10 +60,6 @@ $inuit-responsive-settings: true;
 // inuitcss makes use of a few functions that are also available for you to use
 // later on in your extension of the framework.
 
-
-
-
-
 // Maths helpers.
 //
 // Halve and double numbers, returning rounded integers. E.g.:
@@ -72,6 +68,7 @@ $inuit-responsive-settings: true;
 //     padding: halve(3.2px);
 // }
 //
+
 @function quarter($inuit-number) {
     @return round($inuit-number / 4);
 }
@@ -95,10 +92,6 @@ $inuit-responsive-settings: true;
 
 // inuitcss has a number of default mixins that the framework, and developers
 // working with it, can make use of.
-
-
-
-
 
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value, e.g.:
@@ -175,6 +168,7 @@ $inuit-responsive-settings: true;
 // Here we set a variable assuming that responsive settings are not set
 // globally. If they have been previously been defined, the following variable
 // will be overriden and will be set to `true`.
+
 $inuit-responsive-settings: false !default;
 
 @if ($inuit-responsive-settings == false) {
