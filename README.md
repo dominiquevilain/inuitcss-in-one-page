@@ -23,11 +23,11 @@ GENERIC
 
 BASE
 ----
-- [base.page](https://github.com/inuitcss/base.page/blob/master/_base.page.scss)
-- [base.headings](https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss)
-- [base.paragraphs](https://github.com/inuitcss/base.paragraphs/blob/master/_base.paragraphs.scss)
-- [base.lists](https://github.com/inuitcss/base.lists/blob/master/_base.lists.scss)
-- [base.images](https://github.com/inuitcss/base.images/blob/master/_base.images.scss)
+- The [base.page](https://github.com/inuitcss/base.page/blob/master/_base.page.scss) module is a very high-level module which styles very basic, global, page-level aspects such at the project’s base font-size and line-height.
+- The [base.headings](https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss) module defines font sizes for base-level heading elements from h1 through to h6.
+- The [base.paragraphs](https://github.com/inuitcss/base.paragraphs/blob/master/_base.paragraphs.scss) module provides a very small amount of additional styles for paragraphs.
+- The [base.lists](https://github.com/inuitcss/base.lists/blob/master/_base.lists.scss) module provides very basic styling for regular ordered and unordered lists.
+- The [base.images](https://github.com/inuitcss/base.images/blob/master/_base.images.scss) module provides very basic styling for images (img).
 
 OBJECTS
 -------
