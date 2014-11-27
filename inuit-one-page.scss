@@ -327,3 +327,120 @@ html {
     -moz-osx-font-smoothing: grayscale; /* [5] */
      -webkit-font-smoothing: antialiased; /* [5] */
 }
+
+/*------------------------------------*\
+    #BASE-HEADINGS
+\*------------------------------------*/
+
+/**
+ * Headings 1–6, with corresponding Greek-alphabet abstract classes for double-
+ * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-heading-size-1:  36px !default;
+$inuit-heading-size-2:  30px !default;
+$inuit-heading-size-3:  24px !default;
+$inuit-heading-size-4:  20px !default;
+$inuit-heading-size-5:  16px !default;
+$inuit-heading-size-6:  14px !default;
+
+h1,
+.#{$inuit-namespace}alpha,
+%#{$inuit-namespace}alpha {
+    @include inuit-font-size($inuit-heading-size-1);
+}
+
+h2,
+.#{$inuit-namespace}beta,
+%#{$inuit-namespace}beta {
+    @include inuit-font-size($inuit-heading-size-2);
+}
+
+h3,
+.#{$inuit-namespace}gamma,
+%#{$inuit-namespace}gamma {
+    @include inuit-font-size($inuit-heading-size-3);
+}
+
+h4,
+.#{$inuit-namespace}delta,
+%#{$inuit-namespace}delta {
+    @include inuit-font-size($inuit-heading-size-4);
+}
+
+h5,
+.#{$inuit-namespace}epsilon,
+%#{$inuit-namespace}epsilon {
+    @include inuit-font-size($inuit-heading-size-5);
+}
+
+h6,
+.#{$inuit-namespace}zeta,
+%#{$inuit-namespace}zeta {
+    @include inuit-font-size($inuit-heading-size-6);
+}
+
+/*------------------------------------*\
+    #BASE-PARAGRAPHS
+\*------------------------------------*/
+
+/**
+ * The `.lede` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger: en.wikipedia.org/wiki/Lede_(news)
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-lede-size:   1.125 !default;
+
+.#{$inuit-namespace}lede,
+%#{$inuit-namespace}lede {
+    @include inuit-font-size($inuit-base-font-size * $inuit-lede-size);
+}
+
+/*------------------------------------*\
+    #BASE-LISTS
+\*------------------------------------*/
+
+/**
+ * Remove extra vertical spacing when nesting lists.
+ */
+li {
+
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+
+}
+
+/*------------------------------------*\
+    #BASE-IMAGES
+\*------------------------------------*/
+
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img{
+    max-width: 100%; /* [1] */
+    font-style: italic; /* [2] */
+    vertical-align: middle; /* [3] */
+}
+
+
+
+/**
+ * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
+ *    to remove the effects.
+ * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+.gm-style img, /* [1] */
+img[width], /* [2] */
+img[height] {  /* [2] */
+    max-width: none;
+}
