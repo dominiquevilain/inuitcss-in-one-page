@@ -31,19 +31,19 @@ BASE
 
 OBJECTS
 -------
-- [objects.layout](https://github.com/inuitcss/objects.layout/blob/master/_objects.layout.scss)
-- [objects.box](https://github.com/inuitcss/objects.box/blob/master/_objects.box.scss)
-- [objects.media](https://github.com/inuitcss/objects.media/blob/master/_objects.media.scss)
-- [objects.list-inline](https://github.com/inuitcss/objects.list-inline/blob/master/_objects.list-inline.scss)
-- [objects.block](https://github.com/inuitcss/objects.block/blob/master/_objects.block.scss)
-- [objects.pack](https://github.com/inuitcss/objects.pack/blob/master/_objects.pack.scss)
-- [objects.list-ui](https://github.com/inuitcss/objects.list-ui/blob/master/_objects.list-ui.scss)
-- [objects.list-block](https://github.com/inuitcss/objects.list-block/blob/master/_objects.list-block.scss)
-- [objects.flag](https://github.com/inuitcss/objects.flag/blob/master/_objects.flag.scss)
-- [objects.tabs](https://github.com/inuitcss/objects.tabs/blob/master/_objects.tabs.scss)
-- [objects.tables](https://github.com/inuitcss/objects.tables/blob/master/_objects.tables.scss)
-- [objects.buttons](https://github.com/inuitcss/objects.buttons/blob/master/_objects.buttons.scss)
-- [objects.list-bare](https://github.com/inuitcss/objects.list-bare/blob/master/_objects.list-bare.scss)
+- The [objects.layout](https://github.com/inuitcss/objects.layout/blob/master/_objects.layout.scss) system is a powerful, flexible, highly advanced evolution of the traditional grid system. It is based on [csswizardry-grids](http://csswizardry.com/csswizardry-grids/).
+- The [objects.box](https://github.com/inuitcss/objects.box/blob/master/_objects.box.scss) module simply boxes off content.
+- The [objects.media](https://github.com/inuitcss/objects.media/blob/master/_objects.media.scss) module is inuitcss’ implementation of [Nicole Sullivan](https://twitter.com/stubbornella)’s media object—the poster child of OOCSS. To find out where it all started, read [Nicole’s blog post](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
+- The [objects.list-inline](https://github.com/inuitcss/objects.list-inline/blob/master/_objects.list-inline.scss) module simply displays a list as one horizontal row.
+- The [objects.block](https://github.com/inuitcss/objects.block/blob/master/_objects.block.scss) module simply stacks an image on top of some text content. This incredibly frequently occurring design pattern is now wrapped up in a simple, reusable, configurable abstraction.
+- The [objects.pack](https://github.com/inuitcss/objects.pack/blob/master/_objects.pack.scss) module simply causes any number of elements pack up horizontally to automatically fill an equal, fluid width of their parent.
+- The [objects.list-ui](https://github.com/inuitcss/objects.list-ui/blob/master/_objects.list-ui.scss) module creates blocky, keyline-delimited list items.
+- The [objects.list-block](https://github.com/inuitcss/objects.list-block/blob/master/_objects.list-block.scss) module simply creates blocky lists from uls or ols.
+- The [objects.flag](https://github.com/inuitcss/objects.flag/blob/master/_objects.flag.scss) module is an object similar in appearance to the media object, but which provides slightly more advanced functionality.
+- The [objects.tabs](https://github.com/inuitcss/objects.tabs/blob/master/_objects.tabs.scss) module is a simple abstraction for force a series of elements (usually a list) into an equal-width, tab-like format.
+- The [objects.tables](https://github.com/inuitcss/objects.tables/blob/master/_objects.tables.scss) module provides some useful helpers for common table patterns.
+- The [objects.buttons](https://github.com/inuitcss/objects.buttons/blob/master/_objects.buttons.scss) module is a simple, robust, extensible baseline for building entire suites of buttons onto.
+- The [objects.list-bare](https://github.com/inuitcss/objects.list-bare/blob/master/_objects.list-bare.scss) module simply removes bullets and indents from lists.
 
 COMPONENTS
 ----------
