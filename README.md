@@ -1,5 +1,5 @@
-Inuit en une page avec des liens vers les divers modules
-========================================================
+Inuit in one page with links to the various modules
+===================================================
 
 SETTINGS
 --------
