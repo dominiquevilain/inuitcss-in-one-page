@@ -1,0 +1,179 @@
+///*------------------------------------*\
+//    #TOOLS-FUNCTIONS
+//\*------------------------------------*/
+
+// inuitcss makes use of a few functions that are also available for you to use
+// later on in your extension of the framework.
+
+
+
+
+
+// Maths helpers.
+//
+// Halve and double numbers, returning rounded integers. E.g.:
+//
+// .foo {
+//     padding: halve(3.2px);
+// }
+//
+@function quarter($inuit-number) {
+    @return round($inuit-number / 4);
+}
+
+@function halve($inuit-number) {
+    @return round($inuit-number / 2);
+}
+
+@function double($inuit-number) {
+    @return round($inuit-number * 2);
+}
+
+@function quadruple($inuit-number) {
+    @return round($inuit-number * 4);
+}
+
+
+///*------------------------------------*\
+//    #TOOLS-MIXINS
+//\*------------------------------------*/
+
+// inuitcss has a number of default mixins that the framework, and developers
+// working with it, can make use of.
+
+
+
+
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include inuit-font-size(12px);
+// }
+//
+// This will generate a rem-based font-size with its pixel fallback, as well as
+// a unitless line-height which will place the element on your baseline, e.g.:
+//
+// .foo {
+//     font-size: 12px;
+//     font-size: 0.75rem;
+//     line-height: 2;
+// }
+//
+// If you do not want inuitcss to generate you a line-height automatically, you
+// simply pass in your own as a second paramater:
+//
+// .foo {
+//     @include inuit-font-size(12px, 1.5);
+// }
+//
+// This will yield:
+//
+// .foo {
+//     font-size: 12px;
+//     font-size: 0.75rem;
+//     line-height: 1.5;
+// }
+//
+// This parameter can be any integer, ‘inherit’, or ‘normal’. If you don’t want
+// a line-height at all, pass in a second paramater of ‘none’ or ‘false’:
+//
+// .foo {
+//     @include inuit-font-size(12px, none);
+// }
+//
+// This will yield:
+//
+// .foo {
+//     font-size: 12px;
+//     font-size: 0.75rem;
+// }
+
+@mixin inuit-font-size($inuit-font-size, $inuit-line-height: auto) {
+    font-size: $inuit-font-size;
+    font-size: ($inuit-font-size / $inuit-base-font-size) * 1rem;
+
+    @if $inuit-line-height == auto {
+        line-height: ceil($inuit-font-size / $inuit-base-line-height) * ($inuit-base-line-height / $inuit-font-size);
+    }
+
+    @else {
+
+        @if (type-of($inuit-line-height) == number or $inuit-line-height == inherit or $inuit-line-height == normal) {
+            line-height: $inuit-line-height;
+        }
+
+        @elseif ($inuit-line-height != none and $inuit-line-height != false) {
+            @warn "D’oh! ‘#{$inuit-line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}
+
+
+///*------------------------------------*\
+//    #TOOLS-RESPONSIVE
+//\*------------------------------------*/
+
+// Here we set a variable assuming that responsive settings are not set
+// globally. If they have been previously been defined, the following variable
+// will be overriden and will be set to `true`.
+$inuit-responsive-settings: false !default;
+
+@if ($inuit-responsive-settings == false) {
+    @warn "Oops! Have you included a responsive settings file?"
+}
+
+
+
+
+
+// A simple mixin to quickly generate whole media queries from the aliases and
+// conditions defined in `_settings.responsive.scss`.
+//
+// Usage:
+//
+// .foo {
+//     color: green;
+//
+//     @include media-query(palm) {
+//         color: red;
+//     }
+//
+// }
+
+@mixin media-query($mq) {
+
+    $breakpoint-found: false;
+
+    // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $breakpoint in $breakpoints {
+
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // If the media query we’ve specified has an alias and a condition...
+        @if $mq == $alias and $condition {
+
+            // ...tell the mixin that we’ve found it...
+            $breakpoint-found: true;
+
+            // ...and spit it out here.
+            @media #{$condition} {
+                @content;
+            }
+
+        }
+
+    }
+
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found == false{
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    }
+
+}
