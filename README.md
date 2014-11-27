@@ -10,9 +10,9 @@ SETTINGS
 TOOLS
 -----
 
-The [tools.functions](https://github.com/inuitcss/tools.functions/blob/master/_tools.functions.scss) module—like mixins—contains a few framework functions that are **required** for using any of the rest of inuitcss. 
-The [tools.mixins](https://github.com/inuitcss/tools.mixins/blob/master/_tools.mixins.scss) module contains a few framework mixins that are **required** for using any of the rest of inuitcss.
-Currently, the [tools.responsive](https://github.com/inuitcss/tools.responsive/blob/master/_tools.responsive.scss) module just sets up our media query mixin.
+- The [tools.functions](https://github.com/inuitcss/tools.functions/blob/master/_tools.functions.scss) module—like mixins—contains a few framework functions that are **required** for using any of the rest of inuitcss. 
+- The [tools.mixins](https://github.com/inuitcss/tools.mixins/blob/master/_tools.mixins.scss) module contains a few framework mixins that are **required** for using any of the rest of inuitcss.
+- The [tools.responsive](https://github.com/inuitcss/tools.responsive/blob/master/_tools.responsive.scss) module just sets up our media query mixin.
 
 GENERIC
 -------
