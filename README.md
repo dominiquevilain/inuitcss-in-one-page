@@ -4,11 +4,15 @@ Inuit in one page with links to the various modules
 SETTINGS
 --------
 
+The *settings* layer is essentially usefull when using a preprocessor (which is, of course, recommended). Compared to a regular dev. framework (like rails, or symfony, or laravel, etc.), it plays the same role as the conventions defined in the framework, the config variables and constants and the various namespaces used. In InuitCSS, serveral values are defined, but of course, it’s easy to [override those you want to](https://github.com/inuitcss/getting-started#modifying-inuitcss). Always keep in mind the rule *don’t hack the core*. If you want to change something, don’t touch Inuit, extend/override it.
+
 - The [settings.defaults](https://github.com/inuitcss/settings.defaults/blob/master/_settings.defaults.scss) module contains a few variables and settings that are **required** for using any of the rest of the framework.
 - The [settings.responsive](https://github.com/inuitcss/settings.responsive/blob/master/_settings.responsive.scss) module defines our initial breakpoint aliases and conditions.
 
 TOOLS
 -----
+
+The *tools* layer is also fondamentaly usefull when using a preprocessor. It’s the place to define all your functions, mixins, helpers.
 
 - The [tools.functions](https://github.com/inuitcss/tools.functions/blob/master/_tools.functions.scss) module—like mixins—contains a few framework functions that are **required** for using any of the rest of inuitcss. 
 - The [tools.mixins](https://github.com/inuitcss/tools.mixins/blob/master/_tools.mixins.scss) module contains a few framework mixins that are **required** for using any of the rest of inuitcss.
